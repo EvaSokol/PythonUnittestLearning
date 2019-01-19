@@ -14,8 +14,9 @@ class TestClassFirst(BaseTest):
 
     @classmethod
     def setUpClass(cls):
-        cls.test_variable_one = cls.method_return_string('String returned from Test setUpClass')
-        cls.test_variable_two = cls.method_echo_string('String echo from Test setUpClass')
+        super(TestClassFirst, cls).setUpClass()
+        cls.test_variable_one = super(TestClassFirst, cls).method_return_string('String returned from Test setUpClass')
+        cls.test_variable_two = super(TestClassFirst, cls).method_echo_string('String echo from Test setUpClass')
         print 'End of Test setUpClass'
 
     def test_01_first(self):
