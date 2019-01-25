@@ -12,7 +12,7 @@ class AppInvoker(object):
 
     def bash(self, cmd):
         self.cmd = cmd
-        print('command: ' + self.cmd)
+        # print('command: ' + self.cmd)
         self.proc = subprocess.Popen(
             self.cmd,
             shell=True,

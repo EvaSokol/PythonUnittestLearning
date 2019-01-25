@@ -3,6 +3,7 @@ from AppInvoker import AppInvoker
 
 
 class BaseTest(unittest.TestCase):
+    parent_variable_one = 'parent_variable_one'
 
     def setUp(self):
         print("\n" + self._testMethodName)
